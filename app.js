@@ -26,11 +26,26 @@ app.post('/webhook/', function (req, res) {
       var text = event.message.text;
       console.log(text);
 
-      sendTextMessage(sender, "Hi, Are You translate ?");
+      var ans[] = 1,2,1;
+      var sco = 0;
+      sendTextMessage(sender, "Hi, Start request game ?");
+      sendTextMessage(sender, "1.ตัวไรสีเขียว ?(1.กบ ,2.ไก่)");
+      if (ans[0] == 1) {sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;}
+        else {sendTextMessage(sender, "2.ตัวไรบินได้ ?(1.นก ,2.หนู)");
+          if (ans[1] == 2) {
+            sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;
+          }else{
+            sendTextMessage(sender, "2.นกมีหูหนูมีปีก ?(1.ค้างคาว ,2.ปลาดาว)");
+            if (ans[0] == 1) {
+              sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;
+            }
+          }
+        }
+        var sum = "Sum score : "+sco;
+        sendTextMessage(sender, sum);
 
       // sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
       // Handle a text message from this sender
-      var search = "https://translate.google.co.th/?hl=th#th/en/%E0%B8%"+text;
       sendTextMessage(sender, search);
     }
   }
