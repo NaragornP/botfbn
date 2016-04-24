@@ -26,17 +26,19 @@ app.post('/webhook/', function (req, res) {
       var text = event.message.text;
       console.log(text);
 
-      var ans[] = 1,2,1;
+      var ans1 = 1;
+      var ans2 = 2;
+      var ans3 = 1;
       var sco = 0;
       sendTextMessage(sender, "Hi, Start request game ?");
       sendTextMessage(sender, "1.ตัวไรสีเขียว ?(1.กบ ,2.ไก่)");
-      if (ans[0] == 1) {sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;}
+      if (ans1 == 1) {sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;}
         else {sendTextMessage(sender, "2.ตัวไรบินได้ ?(1.นก ,2.หนู)");
-          if (ans[1] == 2) {
+          if (ans2 == 2) {
             sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;
           }else{
             sendTextMessage(sender, "2.นกมีหูหนูมีปีก ?(1.ค้างคาว ,2.ปลาดาว)");
-            if (ans[0] == 1) {
+            if (ans3 == 1) {
               sendTextMessage(sender, "Complete");sendTextMessage(sender, "Next 2");sco++;
             }
           }
