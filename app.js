@@ -25,6 +25,9 @@ app.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
       var text = event.message.text;
       console.log(text);
+
+      sendTextMessage(sender, "Hi, Are You listen music ?");
+      
       // sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
       // Handle a text message from this sender
       var search = "https://www.youtube.com/results?search_query="+text;
