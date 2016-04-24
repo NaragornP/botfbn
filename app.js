@@ -29,7 +29,7 @@ app.post('/webhook/', function (req, res) {
      
       sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
       // Handle a text message from this sender
-      sendTextMessage(sender, search);
+      // sendTextMessage(sender, search);
     }
   }
   res.sendStatus(200);
