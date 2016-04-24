@@ -26,11 +26,11 @@ app.post('/webhook/', function (req, res) {
       var text = event.message.text;
       console.log(text);
 
-      sendTextMessage(sender, "Hi, Are You listen music ?");
-      
+      sendTextMessage(sender, "Hi, Are You translate ?");
+
       // sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
       // Handle a text message from this sender
-      var search = "https://www.youtube.com/results?search_query="+text;
+      var search = "https://translate.google.co.th/?hl=th#th/en/%E0%B8%"+text;
       sendTextMessage(sender, search);
     }
   }
